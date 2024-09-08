@@ -1,0 +1,65 @@
+﻿
+@model IEnumerable<MVC_Kutuphane_Otomasyonu.Entities.Model.EmanetKitaplar>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg">
+        <div class="ibox">
+            <div class="ibox-head">
+                Emanet Kitap Listesi
+
+            </div>
+            <div class="ibox-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <td>Üye</td>
+                            <td>Kitap</td>
+                            <td>Kitap Sayısı</td>
+                            <td>Aldığı Tarihi</td>
+                            <td>İade Tarihi</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th>@Html.DisplayFor(x => item.Id)</th>
+                                <td>@Html.DisplayFor(x => item.Uyeler.AdiSoyadi)</td>
+                                <td>@Html.DisplayFor(x => item.Kitaplar.KitapAdi)</td>
+                                <td>@Html.DisplayFor(x => item.KitapSayisi)</td>
+                                <td>@Html.DisplayFor(x => item.KitapAldigiTarihi)</td>
+                                <td>@Html.DisplayFor(x => item.KitapIadeTarihi)</td>
+                                <td>
+                                    @Html.ActionLink("Düzenle", "Duzenle", new { id = item.Id }, new { @class = "btn btn-warning btn-sm" }) |
+                                    @Html.ActionLink("Sil", "Sil", "EmanetKitaplar", new { id = item.Id }, new { @class = "btn btn-danger btn-sm delete", onclick = "return confirm('Kayıt Silinsin Mi?')" }) |
+                                    @Html.ActionLink("Teslim Al", "TeslimAl", "EmanetKitaplar", new { id = item.Id }, new { @class = "btn btn-primary btn-sm", onclick = "return confirm('Kitap(lar) İade Edilsin Mi?')" })
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+
+                </table>
+                <div class="form-group">
+                    @Html.ActionLink("Emanet Kitap Ver", "EmanetKitapVer", null, new { @class = "btn btn-success" })
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
