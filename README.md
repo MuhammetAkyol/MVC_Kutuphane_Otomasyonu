@@ -14,7 +14,7 @@ Proje İceriği:
 
 Proje'de Kullandığım Dil ve Paketler:
 
-  C#, ASP.NET MVC, SQL, HTML5, JavaScript, Bootsrap, CSS, Angular
+  C#, ASP.NET MVC, MsSQL, HTML5, JavaScript, Bootsrap, CSS, Angular
 
   
 
