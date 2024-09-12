@@ -12,7 +12,11 @@ Proje İceriği:
 - Duyuru Sayfası
 - Kullanıcıların veya Üyelerin Sistem Üzerinde Yapılan İşlemler Hakkında Veri Tabanına Kullanıcı Hareketleri ve Kitap Hareketleri Kısmı Oluşturulup Sistem Takibiin Yapılabilmesi için Eklenmiştir.
 
+Proje'de Kullandığım Dil ve Paketler:
 
+  C#, ASP.NET MVC, SQL, HTML5, JavaScript, Bootsrap, CSS, Angular
+
+  
 
 ![Login](https://github.com/user-attachments/assets/280cc20f-2436-46d4-83e1-aa9cf671a214)
 ![ÜyeOl](https://github.com/user-attachments/assets/7cf13de6-d980-4d3d-980d-80c70ba9b222)
